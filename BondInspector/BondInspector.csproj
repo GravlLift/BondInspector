@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Fiddler">
-      <HintPath>%LOCALAPPDATA%\Programs\Fiddler\Fiddler.exe</HintPath>
+      <HintPath>$(LOCALAPPDATA)\Programs\Fiddler\Fiddler.exe</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />

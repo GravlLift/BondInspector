@@ -10,7 +10,7 @@ using System.Windows.Forms.Integration;
 
 namespace BondInspector
 {
-    public class BondInspector : Inspector2, IResponseInspector2
+    public class BondInspector : Inspector2, IResponseInspector2, IWSMInspector
     {
         private readonly BondInspectorView bondInspectorView;
         private readonly ElementHost host = new ElementHost();
@@ -52,6 +52,14 @@ namespace BondInspector
             host.Child = bondInspectorView;
             o.Text = "Bond";
             o.Controls.Add(host);
+        }
+
+        public void AssignMessage(WebSocketMessage oWSM)
+        {
+            bondInspectorView.ViewModel.BondText = new BondProcessor(2).ProcessBytes(
+                oWSM.PayloadData,
+                false
+            );
         }
 
         public void Clear()
