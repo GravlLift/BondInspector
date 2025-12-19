@@ -10,7 +10,7 @@ using System.Windows.Forms.Integration;
 
 namespace BondInspector
 {
-    public class BondInspector : Inspector2, IResponseInspector2, IWSMInspector
+    public class BondInspector : Inspector2, IResponseInspector2, IWSMInspector, IRequestInspector2
     {
         private readonly BondInspectorView bondInspectorView;
         private readonly ElementHost host = new ElementHost();
@@ -21,6 +21,7 @@ namespace BondInspector
             bondInspectorView = new BondInspectorView();
         }
 
+        HTTPRequestHeaders IRequestInspector2.headers { get; set; }
         public HTTPResponseHeaders headers { get; set; }
         public byte[] body
         {
