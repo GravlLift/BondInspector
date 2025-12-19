@@ -5,7 +5,7 @@ BondInspector is a hacked together Fiddler inspector for Bond protocol based on 
 The project references Fiddler.exe itself and it's expected to be already installed on the development computer, located at "%LOCALAPPDATA%\Programs\Fiddler\Fiddler.exe".
 1) Project reference -%LOCALAPPDATA%\Programs\Fiddler\Fiddler.exe
 2) Start external program - %LOCALAPPDATA%\Programs\Fiddler\Fiddler.exe
-3) Post-build event copies the output assembly to user's profile - %USERPROFILE%\Documents\Fiddler2\Scripts
+3) Post-build event copies the output assembly to user's profile - %USERPROFILE%\Documents\Fiddler2\Inspectors
 
 Tune the project setting based on your locations.
 
