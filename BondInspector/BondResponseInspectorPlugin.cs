@@ -10,7 +10,7 @@ using System.Windows.Forms.Integration;
 
 namespace BondInspector
 {
-    public class BondInspector : BondInspectorBase, IResponseInspector2
+    public class BondResponseInspector : BondInspectorBase, IResponseInspector2
     {
         public HTTPResponseHeaders headers { get; set; }
         public override byte[] body
