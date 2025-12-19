@@ -1,18 +1,15 @@
-﻿#region using
 using BondReader;
 using Fiddler;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.Integration;
-#endregion using
 
 namespace BondInspector
 {
-    public class BondInspector : BondInspectorBase, IResponseInspector2
+    // Request-side inspector: derives from shared base
+    public class BondRequestInspector : BondInspectorBase, IRequestInspector2
     {
-        public HTTPResponseHeaders headers { get; set; }
+        public HTTPRequestHeaders headers { get; set; }
+
         public override byte[] body
         {
             get { return _body; }

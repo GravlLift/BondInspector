@@ -56,7 +56,9 @@
     <Compile Include="BondInspectorView.xaml.cs">
       <DependentUpon>BondInspectorView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BondInspectorBase.cs" />
     <Compile Include="BondInspectorPlugin.cs" />
+    <Compile Include="BondRequestInspectorPlugin.cs" />
     <Compile Include="BondProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequiredVersion.cs" />
